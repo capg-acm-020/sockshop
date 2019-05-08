@@ -22,6 +22,8 @@ spec:
         env:
         - name: DT_TAGS
           value: "application={{ .Chart.Name }}"
+        - name: DT_CUSTOM_PROP
+          value: "KEPTN=0.2.0 ACLCLASS=DEMO DEPLOYMENT=GREEN"
         ports:
         - name: internalport
           containerPort: {{ .Values.cartsGreen.service.internalPort }}
